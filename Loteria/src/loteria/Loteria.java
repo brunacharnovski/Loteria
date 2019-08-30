@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package loteria;
 
-/**
- *
- * @author bruna.charnovski
- */
+import java.util.Scanner;
+
 public class Loteria {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite 6 numeros");
+        for (int i = 0; i < 6; i++) {
+            capNum(in, i);
+
+        }
     }
-    
+
+    public static int capNum(Scanner in, int i) {
+        System.out.println("Digite o " + (i+1) + "º numero");
+        return 0;
+    }
 }
