@@ -8,7 +8,7 @@ public class Loteria {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite 6 numeros");
         for (int i = 0; i < 6; i++) {
-            int num = -1
+            int num = -1;
             while (num == -1) {
                 num = capNum(in, i);
             }
