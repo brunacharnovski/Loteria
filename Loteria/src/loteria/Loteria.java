@@ -1,5 +1,6 @@
 package loteria;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Loteria {
@@ -31,6 +32,14 @@ public class Loteria {
             }
             valores[i] = num;
             imprimeVetor(valores); // ctrl + spaco
+        }
+        Random r = new Random();
+        
+        int[] bolas = new int[6];
+        for (int i = 0; i < 6; i++) {
+            int bola = (r.nextInt(60) + 1);
+            bolas[i] = bola;
+            imprimeVetor(bolas);
         }
     }
 
