@@ -21,6 +21,7 @@ public class Loteria {
 //        valores2 [5] = 0;
         // para comentar a linha ou varias linhas ctrl + shift + c
 
+        //Pedir os numeros para o usuario
         Scanner in = new Scanner(System.in);
         System.out.println("Digite 6 numeros");
         for (int i = 0; i < 6; i++) {
@@ -36,6 +37,7 @@ public class Loteria {
             valores[i] = num;
             imprimeVetor(valores); // ctrl + spaco
         }
+        // Sorteio dos numeros
         Random r = new Random();
         int[] bolas = new int[6];
         
@@ -54,6 +56,21 @@ public class Loteria {
             bolas[i] = bola;
             imprimeVetor(bolas);
         }
+        //Comparar os resultados
+        int acertos =0;
+        
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (bolas[j] == valores[i]) {
+                    acertos++;
+                    System.out.println("Você acertou o numero " + valores[i]);
+                    break;
+                }
+  
+            }
+            
+        }
+        System.out.println("Você acertou " + acertos + " números");
     }
 
     public static int capNum(Scanner in, int i) {
